@@ -1,0 +1,25 @@
+{% extends 'EmpApp/master.html' %}
+{% block content %}
+<h3>Hello</h3>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    {% for e in AllEmp %}
+    <tr>
+        <td>{{e.id}}</td>
+        <td>
+            {{e.first_name}}
+        </td>
+        <td>{{e.last_name}}
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="deleteall">Delete All</a>
+
+{% endblock %}
